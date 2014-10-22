@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://com.jvra/types"
+           xmlns:tn="http://com.jvra/types"
+        >
+
+    
+    <xs:element name="client" type="tn:ClientType"/>
+    <xs:element name="userHasAccountResponse" type="xs:boolean"/>
+
+
+    <xs:complexType name="ClientType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="last" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

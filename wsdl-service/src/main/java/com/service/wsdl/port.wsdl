@@ -1,0 +1,30 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             targetNamespace="http://com.jvra/port"
+             xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+             xmlns:tns="http://com.jvra/port"
+             xmlns:types="http://com.jvra/types"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <types>
+        <xs:schema>
+            <xs:import namespace="http://com.jvra/types" schemaLocation="schemas.xsd"/>
+        </xs:schema>
+    </types>
+
+
+    <message name="userHasAccount">
+        <part name="client" element="types:client"/>
+    </message>
+
+    <message name="hasAccountResponse">
+        <part name="return" element="types:userHasAccountResponse"/>
+    </message>
+
+    <portType name="Bank">
+        <operation name="userHasAccount">
+            <input message="tns:userHasAccount" wsam:Action="http://com.jvra/port/userHasAccount"/>
+            <output message="tns:hasAccountResponse" wsam:Action="http://com.jvra/port/hasAccountResponse"/>
+        </operation>
+    </portType>
+
+</definitions>

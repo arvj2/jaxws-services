@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="random-service:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/random_service_war</output-path>
+    <root id="archive" name="random-service_war.war">
+      <element id="artifact" artifact-name="random-service:war exploded" />
+    </root>
+  </artifact>
+</component>
